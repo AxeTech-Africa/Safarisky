@@ -1,0 +1,386 @@
+/* --------------------------------------
+=========================================
+Trans Aero - Responsive Logistic Html Template
+Version: 1.0 (Initial Release)
+Designed By: Vadzim Liashkevich
+=========================================
+
+ 
+ /*-- IMPORT GOOGLE WEB FONTS --*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,300,700);
+
+ /*-- BOOTSTRAP --*/
+@import url('bootstrap.min.css');
+
+ /*-- FONT AWESOME --*/
+@import url('font-awesome.min.css');
+
+ /*-- FLATICONS --*/
+@import url('../fonts/flaticon/flaticon.css');
+
+ /*-- SLIDER PRO --*/
+@import url('../assets/slider-pro/css/slider-pro.min.css');
+
+ /*-- ANIMATE CSS --*/
+@import url('animate.css');
+
+ /*-- OWL CAROUSEL --*/
+@import url('../assets/owl-carousel/owl.carousel.css');
+@import url('../assets/owl-carousel/owl.theme.css');
+
+ /*-- MAIN STYLES --*/
+@import url('theme.min.css');
+
+ /*-- RESPONSIVE FIXES --*/
+@import url('responsive.css');
+
+ /*-- COLOR SCHEMES --*/
+@import url('red.css');
+/*@import url('green.css');*/
+/*@import url('blue.css');*/
+
+
+
+
+  
+  .toggle-address:hover {
+    color: 
+    #f14b4b; /* Change color on hover */
+  }
+
+  /* Card container styles */
+.info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.info-item i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.info-item p {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+/* Hover effect to scale and change background color */
+.info-item:hover {
+    background-color: #e9f6ff;
+    transform: scale(1.05);
+}
+
+.info-item:hover i {
+    color: #00c0e2; /* Change icon color on hover */
+}
+
+/* Responsive design: adjust grid layout for smaller screens */
+@media (max-width: 768px) {
+    .info-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.home-review-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .home-review-carousel-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .home-review-carousel-item.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .home-review-carousel-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .home-review-carousel-name {
+    font-weight: bold;
+  }
+  
+  .home-review-carousel-quote {
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .home-review-carousel-text p {
+    font-style: italic;
+    color: #444;
+  }
+  
+
+
+  /* For large screens, the content remains as it is */
+.responsive-text {
+  font-size: 1.3rem; /* Adjust text size for readability */
+}
+
+/* Make image responsive */
+.responsive-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+  .responsive-text {
+      font-size: 1.3rem; /* Smaller text size for mobile */
+      margin-bottom: 115px; /* Add some space below the text */
+  }
+  
+  /* Adjust the image's margin and alignment for mobile */
+  #aboutimage {
+      height: auto;
+      margin-bottom: 115px; /* Add some space below the text */
+  }
+}
+
+
+
+/* General Defaults for Slider Content */
+.main-slider-content h2,
+.main-slider-content p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+/* Small Screens: Tablets and Phones */
+@media (max-width: 768px) {
+    .main-slider-content h2 {
+        font-size: 14px;
+        line-height: 1.2;
+        margin: 5px 0;
+    }
+
+    .main-slider-content p {
+        font-size: 10px;
+        line-height: 1.1;
+        padding: 0 5px;
+    }
+
+    .main-slider-content a {
+        font-size: 10px;
+        padding: 5px 10px;
+        margin: 5px auto;
+        display: inline-block;
+    }
+
+    .main-slider-content {
+        padding: 10px;
+    }
+}
+
+/* Extra Small Screens: Phones in Portrait */
+@media (max-width: 480px) {
+    .main-slider-content h2 {
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 2px 0;
+    }
+
+    .main-slider-content p {
+        font-size: 8px;
+        line-height: 1;
+        padding: 0 2px;
+    }
+
+    .main-slider-content a {
+        font-size: 8px;
+        padding: 4px 8px;
+        margin: 2px auto;
+    }
+
+    .main-slider-content {
+        padding: 5px;
+    }
+}
+
+
+.about-text-image {
+    text-align: center; /* Center the image in its container */
+    margin: 0 auto; /* Add optional margin for alignment */
+}
+
+.about-text-image img {
+    width: 100%; /* Default: full width of its container */
+    height: 400px; /* Maintain aspect ratio */
+    max-width: 1100px; /* Prevents excessive stretching on larger screens */
+}
+
+/* Small Screens: Tablets and Phones */
+@media (max-width: 768px) {
+    .about-text-image img {
+        max-width: 100%; /* Ensure image fits smaller containers */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Extra Small Screens: Phones in Portrait */
+@media (max-width: 480px) {
+    .about-text-image img {
+        max-width: 100%; /* Adjust for narrow screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+
+
+.footer-1 {
+    display: flex;
+    flex-direction: column; /* Stack logo and button vertically */
+    align-items: center; /* Center them horizontally */
+    justify-content: center; /* Vertically center the content */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .logo-image {
+    margin-bottom: 20px; /* Adjust space between logo and button */
+  }
+  .logo-image img{
+    width: 100px; /* Adjust logo size for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .footer-1-button {
+    padding: 20px 0; /* Adjust padding around the button */
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 767px) {
+    .footer-1 {
+      padding: 10px; /* Adjust padding for mobile screens */
+    }
+  
+    .logo-image img {
+      width: 60px; /* Adjust logo size for mobile */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .footer-1-button {
+      padding-right: 0; /* Reset padding-right on mobile */
+    }
+  }
+  
+
+
+  /* style for shop */
+
+/* Basic styling for the custom search container */
+.custom-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Wrapper for dropdown menus */
+.custom-search-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Label styling */
+.custom-search-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Styling the custom dropdowns */
+.custom-dropdown {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effects for the dropdown */
+.custom-dropdown:hover, .custom-dropdown:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Styling for the custom search button */
+.custom-search-button {
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-search-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-search-button:focus {
+  outline: none;
+}
+
+
+
+
+/* Container for the images (e.g., carousel or slider) */
+.slider-container {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+/* Each image slide */
+.slide {
+  width: 100%; /* Each slide takes full width of the container */
+  transition: transform 1s ease-in-out;
+}
+
+/* To align images horizontally */
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
