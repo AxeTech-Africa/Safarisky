@@ -144,40 +144,47 @@ new WOW().init();
 	
 	}
  
-     /*=== Number animation in stats section at scroll ====*/
-     
-    if($('*').is('#home-stats')) {
-    	$('#home-stats').on('scrollSpy:enter', function() {
-    		
-    		$('#num1').animate({ num: 5000 - 3 }, {
-    				duration: 3000,
-    				step: function (num){
-    					this.innerHTML = (num + 3).toFixed(0)
-    				}
-    			});
-    			$('#num2').animate({ num: 4500 - 3 }, {
-    				duration: 3300,
-    				step: function (num){
-    					this.innerHTML = (num + 3).toFixed(0)
-    				}
-    			});
-    			$('#num3').animate({ num: 80 - 3 }, {
-    				duration: 3600,
-    				step: function (num){
-    					this.innerHTML = (num + 3).toFixed(0)
-    				}
-    			});
-    			$('#num4').animate({ num: 14 - 3 }, {
-    				duration: 3900,
-    				step: function (num){
-    					this.innerHTML = (num + 3).toFixed(0)
-    				}
-    			});
-    		
-    	});
-    	$('#home-stats').scrollSpy();
-    }
- 
+   /*=== Number animation in stats section at scroll ====*/
+if($('*').is('#home-stats')) {
+    $('#home-stats').on('scrollSpy:enter', function() {
+        
+        // Animate num1 to 4500
+        $('#num1').animate({ num: 4500 - 3 }, {
+            duration: 3000,
+            step: function (num){
+                this.innerHTML = (num + 3).toFixed(0)
+            }
+        });
+
+        // Animate num2 to 5000
+        $('#num2').animate({ num: 5000 - 3 }, {
+            duration: 3300,
+            step: function (num){
+                this.innerHTML = (num + 3).toFixed(0)
+            }
+        });
+
+        // Animate num3 to 80
+        $('#num3').animate({ num: 80 - 3 }, {
+            duration: 3600,
+            step: function (num){
+                this.innerHTML = (num + 3).toFixed(0)
+            }
+        });
+
+        // You can add the same for num4 if needed
+        $('#num4').animate({ num: 14 - 3 }, {
+            duration: 3900,
+            step: function (num){
+                this.innerHTML = (num + 3).toFixed(0)
+            }
+        });
+    });
+
+    // Initialize scrollSpy
+    $('#home-stats').scrollSpy();
+}
+
     
 	/*=== Play and pause video section ====*/
 	var video =  document.getElementById('aboutvideo');
