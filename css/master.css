@@ -384,3 +384,169 @@ Designed By: Vadzim Liashkevich
   display: flex;
   transition: transform 1s ease-in-out;
 }
+
+/* floating socials */
+
+.floating-social-sidebar {
+  position:fixed; /* Makes it stay in place while scrolling */
+  left: 0; /* Positions it on the left side */
+  top: 50%; /* Centers it vertically */
+  transform: translateY(-50%); /* Adjusts for perfect vertical centering */
+  z-index: 1000; /* Ensures it stays above other content */
+  display: flex;
+  flex-direction: column; /* Stacks buttons vertically */
+  gap: 10px; /* Adds space between buttons */
+  padding: 10px; /* Adds some padding around the buttons */
+  background: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background */
+  border-radius: 0 8px 8px 0; /* Optional: Rounds the right corners */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Corrected selector: Added space between .floating-social-sidebar and .my-btn */
+
+.floating-social-sidebar .my-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Ensure equal width */
+  height: 40px; /* Ensure equal height */
+  text-decoration: none;
+  background: rgb(54, 192, 54); /* Button background */
+  border-radius: 50%; /* Ensures a perfect circle */
+  transition: background 0.3s ease;
+  overflow: hidden; /* Prevents content from overflowing */
+  padding: 0; /* Ensure no extra padding */
+}
+
+
+.floating-social-sidebar .my-btn:hover {
+  background:#f14b4b; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .floating-social-sidebar {
+    left: auto; /* Remove left positioning */
+    top: auto;
+    bottom: 20%; /* Position it lower on the screen */
+    transform: translateY(0); /* Remove unnecessary translation */
+    padding: 8px; /* Ensure proper spacing */
+    gap: 8px; /* Adjust spacing between buttons */
+    border-radius: 12px; /* Slightly rounded edges */
+  }
+
+  .floating-social-sidebar .my-btn {
+    width: 40px; /* Maintain a touch-friendly size */
+    height: 40px;
+    border-radius: 50%; /* Ensure perfect circle */
+  }
+
+  
+}
+
+
+
+/* WhatsApp Widget Button */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px; /* Position it 20px above the bottom of the page */
+  right: 20px; /* Position it 20px from the right edge */
+  background-color: #25D366; /* WhatsApp green color */
+  padding: 15px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-widget a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-widget a i {
+  margin-right: 10px;
+  font-size: 20px; /* Icon size */
+}
+
+.whatsapp-widget:hover {
+  background-color: #f14b4b; /* Darker shade of WhatsApp green when hovered */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .whatsapp-widget {
+    bottom: 15px; /* Slightly adjust the bottom position */
+    right: 15px; /* Slightly adjust the right position */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Slightly smaller font size */
+  }
+
+  .whatsapp-widget a i {
+    font-size: 16px; /* Smaller icon size */
+    margin-right: 8px; /* Adjust margin between icon and text */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-widget {
+    bottom: 10px; /* Further reduce bottom space for very small screens */
+    right: 10px; /* Further reduce right space for very small screens */
+    padding: 8px 12px; /* Further adjust padding */
+    font-size: 14px; /* Further reduce font size */
+  }
+
+  .whatsapp-widget a i {
+    font-size: 14px; /* Even smaller icon for small screens */
+    margin-right: 6px; /* Adjust margin for small screens */
+  }
+}
+
+
+
+
+/* Container for the scrolling text */
+.scrolling-banner {
+  width: 85%;
+  position: relative;
+  overflow: hidden; /* Hides the text when it's out of the container's bounds */
+  padding: 10px 0;
+  left: 7%; /* Adjust the starting position (this can be modified to where you want the text to start) */
+
+  
+}
+
+/* The scrolling text itself */
+.scrolling-text {
+  display: inline-block; /* Make it inline so we can control its movement */
+  white-space: nowrap; /* Prevent text from wrapping */
+  color: #f14b4b;
+  font-size: 18px;
+  font-weight: bold;
+  animation: scrollBanner 20s linear infinite; /* Controls the scrolling animation */
+  position: relative;
+  right: 10%; /* Adjust the end position (this will determine where the text stops before disappearing) */
+
+}
+
+/* Keyframe to make the text move from right to left */
+@keyframes scrollBanner {
+  0% {
+      transform: translateX(100%); /* Start from right */
+  }
+  100% {
+      transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+
+
+
+
+
