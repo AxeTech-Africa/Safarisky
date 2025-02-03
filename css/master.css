@@ -411,7 +411,7 @@ Designed By: Vadzim Liashkevich
   width: 40px; /* Ensure equal width */
   height: 40px; /* Ensure equal height */
   text-decoration: none;
-  background: rgb(54, 192, 54); /* Button background */
+  background: #f14b4b; /* Button background */
   border-radius: 50%; /* Ensures a perfect circle */
   transition: background 0.3s ease;
   overflow: hidden; /* Prevents content from overflowing */
@@ -420,7 +420,7 @@ Designed By: Vadzim Liashkevich
 
 
 .floating-social-sidebar .my-btn:hover {
-  background:#f14b4b; /* Darker green on hover */
+  background:green; /* Darker green on hover */
 }
 
 @media (max-width: 768px) {
@@ -450,7 +450,7 @@ Designed By: Vadzim Liashkevich
   position: fixed;
   bottom: 20px; /* Position it 20px above the bottom of the page */
   right: 20px; /* Position it 20px from the right edge */
-  background-color: #25D366; /* WhatsApp green color */
+  background-color:#f14b4b; /* WhatsApp green color */
   padding: 15px 20px;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -476,7 +476,7 @@ Designed By: Vadzim Liashkevich
 }
 
 .whatsapp-widget:hover {
-  background-color: #f14b4b; /* Darker shade of WhatsApp green when hovered */
+  background-color: green; /* Darker shade of WhatsApp green when hovered */
 }
 
 /* Mobile Responsiveness */
