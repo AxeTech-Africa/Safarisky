@@ -623,3 +623,48 @@ Designed By: Vadzim Liashkevich
   color: #ffffff;
   text-align: center;
 }
+
+
+.social-link.wechat {
+  position: relative; /* Needed for absolute positioning of the tooltip */
+  display: inline-block;
+  text-decoration: none; /* Optional: remove underline if desired */
+}
+
+/* Style the tooltip (WeChat ID) */
+.social-link.wechat .wechat-id {
+  display: none; /* Hide by default */
+  position: relative;
+  top: 100%; /* Position below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* Tooltip background color */
+  color: #000; /* Text color */
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 14px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Display the tooltip on hover, focus, or when active (clicked) */
+.social-link.wechat:hover .wechat-id,
+.social-link.wechat:focus .wechat-id,
+.social-link.wechat:active .wechat-id {
+  display: block;
+}
+
+/* Target only TikTok and WeChat icons */
+.tiktok .my-btn-text i,
+.wechat .my-btn-text i {
+    font-size: 15px; /* Adjust size as needed */
+}
+/* Adjust TikTok and WeChat button sizes */
+.tiktok .my-btn, 
+.wechat .my-btn {
+    width: 32px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+}
