@@ -172,26 +172,26 @@
 		MAIN SLIDER
 	============================== -->
 	<div class="slider">
-        <div class="slides">
-            <div class="slide active">
-                <img src="media/main-slider/1.jpg" alt="Ship at sea">
-                <div class="slide-content">
-                    Your Reliable, Ocean Freight Service
-                    <br>
-					
-                </div>
-            </div>
-            <div class="slide">
-                <img src="media/main-slider/2.jpg" alt="Ship docking">
-                <div class="slide-content">
-                    Efficiency With Every Shipment
-                    <br>
-                </div>
-            </div>
-        </div>
-        <button class="slider-btn prev">&#10094;</button>
-        <button class="slider-btn next">&#10095;</button>
-    </div>
+		<div class="slides">
+			<div class="slide active">
+				<img src="media/main-slider/1.jpg" alt="Ship at sea">
+				<div class="slide-content slide-content-1">
+					Your Reliable, Ocean Freight Service
+					<br>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="media/main-slider/2.jpg" alt="Ship docking">
+				<div class="slide-content slide-content-2">
+					Efficiency With Every Shipment
+					<br>
+				</div>
+			</div>
+		</div>
+		<button class="slider-btn prev">&#10094;</button>
+		<button class="slider-btn next">&#10095;</button>
+	</div>
+	
 	
 	<!-- =========================
 		END MAIN SLIDER
@@ -621,7 +621,7 @@
 						</div>
 					</a>
 					<!-- we chat link -->
-					<a href="#" class="social-link wechat" target="_blank">
+					<a href="#" class="social-link wechat" onclick="copyWeChatID(event)" target="_blank">
 						<div class="my-btn" style="background-color: #07C160;">
 							<div class="my-btn-bg-top"></div>
 							<div class="my-btn-bg-bottom"></div>
@@ -630,7 +630,7 @@
 							</div>
 						</div>
 						<!-- Hidden text that will display on hover/focus/click -->
-						<span class="wechat-id">WeChat ID: wxid_p0r6ys19bzry22</span>
+						<span class="wechat-id" id="wechatID">WeChat ID: wxid_y8n2b77leoms22</span>
 					</a>
 
 				</div>
@@ -818,6 +818,17 @@
             showSlide(index);
         }, 5000);
     </script>
+	<script>
+	function copyWeChatID(event) {
+        event.preventDefault(); // Prevent the default link action
+        const weChatText = document.getElementById("wechatID").innerText.replace("WeChat ID: ", "");
+        navigator.clipboard.writeText(weChatText).then(() => {
+            alert("WeChat ID copied to clipboard!");
+        }).catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+    }
+	</script>
 
 
 </body>
